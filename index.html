@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">	
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id='target'></div>
+
+<script type='text/template' id="tmpl-news">
+	 <div class="row">
+		<div class="col-md-10 col-xs-12" id="photo">
+			<a href="#" class="thumbnail"><img src='${photo}' /></a>
+		</div>
+		<div class="col-md-2 col-xs-12" id="message">
+			<p class="lead">${title}</p>
+		</div>
+	 </div>
+</script>
+
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/jquery.tmpl.js" type="text/javascript"></script>
+<script src="js/bootstrap.js" type="text/javascript"></script>
+ <script>
+ var news = [{
+ 	"photo": "images/news-2014-01-05.jpg",
+ 	"title": "工地的工人"
+ }, {
+  	"photo": "images/news-2014-01-05.jpg",
+ 	"title": "工人"
+ }, {
+  	"photo": "images/news-2014-01-05.jpg",
+ 	"title": "工廠裡的工人"
+ }];
+
+$('#tmpl-news').tmpl(news).appendTo( "#target" );
+ </script>
+</body>
+</html>
